@@ -10,7 +10,21 @@
         <title>Detalle Recetas</title>
     </head>
     <body>
-        <?php include('../Vista/BarraMenu.php'); ?>
+        <?php 
+		if(isset($_SESSION['id_perfil']))
+             {  $id=$_SESSION['id_perfil'];
+			    if($id == 1)
+				{
+					include('BarraMenuAdmin.php');
+				}else if($id == 2)
+				{
+					include('BarraMenuConsulta.php');
+				}else{
+					include('BarraMenuPaciente.php');
+				}
+			 }
+		
+		 ?>
 <img src="../Imagenes/baku.jpg" style="width:100%; height:100%; position:absolute; left:0px;top:0px; z-index:-1" />
         <div class="container">
 

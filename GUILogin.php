@@ -30,7 +30,8 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Entrar")
    { $usuario=$_POST["usuario"];}
   if(isset($_POST["clave"]) & $_POST["clave"]!="" )
    { $clave=$_POST["clave"];}
-  if($usuario!="" && $clave!="")  include("Sesion/TLogin.php");
+  if($usuario!="" && $clave!="")
+    include("Sesion/TLogin.php"); 
 }
   
 if(isset($_POST["OK1"]) && $_POST["OK1"]=="Salir") 

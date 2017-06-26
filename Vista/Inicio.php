@@ -12,17 +12,31 @@
 	</head>
 	<body>
 	    <?php  session_start(); ?>
-	    <?php  
+	    
+		<?php 
+		if(isset($_SESSION['id_perfil']))
+             {  $id=$_SESSION['id_perfil'];
+			    if($id == 1)
+				{
+					include('BarraMenuAdmin.php');
+				}else if($id == 2)
+				{
+					include('BarraMenuConsulta.php');
+				}else{
+					include('BarraMenuPaciente.php');
+				}
+			 }
+		
+		 ?>
+		<?php  
+
 		if(isset($_SESSION['usuario']))
              {  $nombre=$_SESSION['usuario'];
-			    //<!--echo "Bienvenido ".$_SESSION['usuario'];!-->
-			   // echo("<font color='fucsia'>BIENVENIDO:</font>  ".$_SESSION['usuario']);
-				echo("<font color='fucsia'>BIENVENIDO: $nombre</font>  ");
+				echo("<h1>BIENVENIDO: $nombre</h1>  ");
 			 }
 		 
 	    else {  header("Location:GUILogin.php"); }
-		?>
-		<?php include('BarraMenu.php'); ?>
+		?> 
 <img src="../Imagenes/zaha.jpg" style="width:100%; height:100%; position:absolute; left:0px;top:0px; z-index:-1" />
 		<div class="container">
 			<div class="row">				

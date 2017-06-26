@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../Vista/Inicio.php">Panel de Control</a>
+                <a class="navbar-brand" href="../Vista/Inicio.php">HOME</a>
             </div>
 	
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -19,7 +19,7 @@
                     <li><a href="../Vista/GUIFarmaco.php">GESTION FARMACOS</a></li>
                     <li><a href="../Vista/GUIReceta.php">GESTION RECETAS</a></li>	
                     <li><a href="../Vista/GUIDetalleRecetas.php">GESTION DETALLES RECETAS</a></li>	
-					<li class="left"><a href="../GUILogin.php">SESION </a></li>											
+					<li class="left"><a href="../GUILogin.php">CERRAR SESION</a></li>											
                     
                 </ul>
 
@@ -29,7 +29,7 @@
 						<li><a href="../Vista/GUIFarmaco.php">GESTION FARMACOS</a></li>
                     	<li><a href="../Vista/GUIReceta.php">GESTION RECETAS</a></li>	
                     	<li><a href="../Vista/GUIDetalleRecetas.php">GESTION DETALLES RECETAS</a></li>				
-                        <li class="left"><a href="../GUILogin.php">SESION </a></li>
+                        <li class="left"><a href="../GUILogin.php">CERRAR SESION</a></li>
 						
                     </ul>
                 </ul>

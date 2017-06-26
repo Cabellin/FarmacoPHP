@@ -21,27 +21,27 @@ class TipoFarmaco
    //NEGOCIO
 public function ingresarTipoFarmaco()
    { $objConex=new Conexion();
-     $sql="INSERT INTO TIPO_FARMACO VALUES('".$this->id_tipo."','".$this->descripcion_tipo."')";
+     $sql="INSERT INTO TIPO_FARMACO VALUES(".$this->id_tipo",'".$this->descripcion_tipo."')";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }
    
 public function modificarTipoFarmaco()
    { $objConex=new Conexion();
-     $sql="UPDATE TIPO_FARMACO SET DESCRIPCION_TIPO='".$this->descripcion_tipo."' WHERE(ID_TIPO='".$this->id_tipo."')";
+     $sql="UPDATE TIPO_FARMACO SET DESCRIPCION_TIPO='".$this->descripcion_tipo."' WHERE(ID_TIPO=".$this->id_tipo")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    } 
     
 public function eliminarTipoFarmaco()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="DELETE FROM TIPO_FARMACO WHERE(ID_TIPO='".$this->id_tipo."')";
+     $sql="DELETE FROM TIPO_FARMACO WHERE(ID_TIPO=".$this->id_tipo")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    } 
 public function buscarTipoFarmaco()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="SELECT * FROM TIPO_FARMACO WHERE(ID_TIPO='".$this->id_tipo."')";
+     $sql="SELECT * FROM TIPO_FARMACO WHERE(ID_TIPO=".$this->id_tipo")";
      $vector=$objConex->generarTransaccion($sql);
      return $vector;
    } 

@@ -30,7 +30,7 @@ class DetalleRecetas
    //NEGOCIO
 public function ingresarDetalleRecetas()
    { $objConex=new Conexion();
-     $sql="INSERT INTO DETALLE_RECETAS VALUES('".$this->id_receta."','".$this->id_farmaco."',".$this->cantidad.",".$this->sub_total.")";
+     $sql="INSERT INTO DETALLE_RECETAS VALUES(".$this->id_receta.",".this->id_farmaco.",".$this->cantidad.",".$this->sub_total.")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }

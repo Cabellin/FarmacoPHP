@@ -33,28 +33,28 @@ class Receta
    //NEGOCIO
 public function ingresarReceta()
    { $objConex=new Conexion();
-     $sql="INSERT INTO RECETA VALUES('".$this->id_receta."','".$this->fecha_emision."',".$this->total_receta.",'".$this->estado."','".$this->id_usuario."')";
+     $sql="INSERT INTO RECETA VALUES(".$this->id_receta.",'".$this->fecha_emision."',".$this->total_receta.",'".$this->estado."',".$this->id_usuario.")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }
    
 public function modificarReceta()
    { $objConex=new Conexion();
-     $sql="UPDATE RECETA SET FECHA_EMISION='".$this->fecha_emision."',TOTAL_RECETA=".$this->total_receta.", ESTADO='".$this->estado."' WHERE(ID_RECETA='".$this->id_receta."' && ID_USUARIO='".id_usuario."')";
+     $sql="UPDATE RECETA SET FECHA_EMISION='".$this->fecha_emision."',TOTAL_RECETA=".$this->total_receta.", ESTADO='".$this->estado."' WHERE(ID_RECETA=".$this->id_receta." && ID_USUARIO=".id_usuario.")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    } 
     
 public function eliminarReceta()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="DELETE FROM RECETA WHERE(ID_RECETA='".$this->id_receta."')";
+     $sql="DELETE FROM RECETA WHERE(ID_RECETA=".$id_receta.")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }  
    
 public function buscarReceta()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="SELECT * FROM RECETA WHERE(ID_RECETA='".$this->id_receta."' && ID_USUARIO='".id_usuario."')";
+     $sql="SELECT * FROM RECETA WHERE(ID_RECETA=".$id_receta." && ID_USUARIO=".$id_usuario.")";
      $vector=$objConex->generarTransaccion($sql);
      return $vector;
    } 

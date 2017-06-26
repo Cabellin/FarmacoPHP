@@ -45,28 +45,28 @@ class Usuarios
    //NEGOCIO
 public function ingresarUsuario()
    { $objConex=new Conexion();
-     $sql="INSERT INTO USUARIOS VALUES('".$this->id_usuario."','".$this->login_usuario."','".$this->pass_usuario."','".$this->nombre_usuario."','".$this->apellido_usuario."','".$this->correo_usuario."','".$this->fecha_nacimiento_usuario."','".$this->id_perfil."')";
+     $sql="INSERT INTO USUARIOS VALUES(".$this->id_usuario",'".$this->login_usuario."','".$this->pass_usuario."','".$this->nombre_usuario."','".$this->apellido_usuario."','".$this->correo_usuario."','".$this->fecha_nacimiento_usuario."',".$this->id_perfil")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }
    
 public function modificarUsuario()
    { $objConex=new Conexion();
-     $sql="UPDATE USUARIOS SET LOGIN_USUARIO='".$this->login_usuario."',PASS_USUARIO='".$this->pass_usuario."', NOMBRE_USUARIO='".$this->nombre_usuario."', APELLIDO_USUARIO='".$this->apellido_usuario."', CORREO_USUARIO='".$this->correo_usuario."', FECHA_NACIMIENTO_USUARIO='".$this->fecha_nacimiento_usuario."' WHERE(ID_USUARIO='".id_usuario."' && ID_PERFIL='".$this->id_perfil."')";
+     $sql="UPDATE USUARIOS SET LOGIN_USUARIO='".$this->login_usuario."',PASS_USUARIO='".$this->pass_usuario."', NOMBRE_USUARIO='".$this->nombre_usuario."', APELLIDO_USUARIO='".$this->apellido_usuario."', CORREO_USUARIO='".$this->correo_usuario."', FECHA_NACIMIENTO_USUARIO='".$this->fecha_nacimiento_usuario."' WHERE(ID_USUARIO='".id_usuario."' && ID_PERFIL=".$this->id_perfil")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    } 
     
 public function eliminarUsuario()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="DELETE FROM USUARIOS WHERE(ID_USUARIO='".$this->id_usuario."')";
+     $sql="DELETE FROM USUARIOS WHERE(ID_USUARIO=".$this->id_usuario")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }  
    
 public function buscarUsuario()
    { $objConex=new Conexion();//Instanciar clase Conexion
-     $sql="SELECT * FROM USUARIOS WHERE(ID_USUARIO='".$this->id_usuario."' && ID_PERFIL='".id_perfil."')";
+     $sql="SELECT * FROM USUARIOS WHERE(ID_USUARIO=".$this->id_usuario" && ID_PERFIL='".id_perfil."')";
      $vector=$objConex->generarTransaccion($sql);
      return $vector;
    } 
