@@ -14,19 +14,7 @@
 	    <?php  session_start(); ?>
 	    
 		<?php 
-		if(isset($_SESSION['id_perfil']))
-             {  $id=$_SESSION['id_perfil'];
-			    if($id == 1)
-				{
-					include('BarraMenuAdmin.php');
-				}else if($id == 2)
-				{
-					include('BarraMenuConsulta.php');
-				}else{
-					include('BarraMenuPaciente.php');
-				}
-			 }
-		
+		include('BarraMenuAdmin.php');
 		 ?>
 		<?php  
 

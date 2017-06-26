@@ -16,8 +16,9 @@
      <tr><th bgcolor=#6699FF>usuario</th><td><input type=text name=usuario></td></tr>
 	   <tr><th bgcolor=#6699FF>clave</th>  <td><input type=password name=clave></td></tr>
      <tr><th bgcolor=#6699FF>INGRESO A PAGINA</th><td><input type=submit name="OK"  value="Entrar"></td></tr>
-	 <tr><th bgcolor=#6699FF>ABANDONAR PAGINA</th><td><input type=submit name="OK1" value="Salir"></td></tr>
-</table></form></center>	 
+	 <tr><td></td></tr></form>
+   <tr><td><a href="../FarmacoPHP/Vista/GUIRegistrarUsu.php">REGISTRAR</a></td></tr>
+</table></center>	 
 </div>
 </body>
 </html>
@@ -33,8 +34,5 @@ if(isset($_POST["OK"]) && $_POST["OK"]=="Entrar")
   if($usuario!="" && $clave!="")
     include("Sesion/TLogin.php"); 
 }
-  
-if(isset($_POST["OK1"]) && $_POST["OK1"]=="Salir") 
-{exit();}
    
 ?>

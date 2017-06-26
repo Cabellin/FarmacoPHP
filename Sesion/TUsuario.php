@@ -23,9 +23,20 @@ if(isset($_POST["OK"]) & $_POST["OK"]=="Ingresar")
 { $objUsuario=new Usuarios();
 $objUsuario->Usuarios($id_usuario,$login_usuario,$pass_usuario,$nombre_usuario,$apellido_usuario,$correo_usuario,$fecha_nacimiento_usuario,$id_perfil);
   $resul=$objUsuario->ingresarUsuario();
-  if ($resul!="") header("Location:../Vista/GUIUsuario.php");
+  if ($resul!="") header("Location:../Vista/GUIUsuario.php");  
   else   echo "<script language='javascript'>alert('ERROR:DATOS PERDIDOS, NO ALMACENADOS');
                 window.location='../Vista/GUIUsuario.php'</script>";         
+}
+
+if(isset($_POST["OK"]) & $_POST["OK"]=="Registrar")
+{ $objUsuario=new Usuarios();
+$objUsuario->Usuarios($id_usuario,$login_usuario,$pass_usuario,$nombre_usuario,$apellido_usuario,$correo_usuario,$fecha_nacimiento_usuario,$id_perfil);
+  $resul=$objUsuario->ingresarUsuario();
+  if ($resul!="")
+  echo "<script language='javascript'>confirm('Usuario registrado con éxito!');
+                window.location='../Vista/GUIRegistrarUsu.php'</script>";
+  else   echo "<script language='javascript'>alert('ERROR:DATOS PERDIDOS, NO ALMACENADOS');
+                window.location='../Vista/GUIUsuarioRegistrarUsu.php'</script>";         
 }
 
 if(isset($_POST["OK1"]) & $_POST["OK1"]=="Modificar")
