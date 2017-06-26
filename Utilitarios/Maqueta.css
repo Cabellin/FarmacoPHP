@@ -1,0 +1,84 @@
+/* CSS Document */
+/*Maquetacion de referencia para el proyecto web*/
+/*Contenedor*/
+#contenedor{
+width:940px;
+padding:10px;
+background:#999999;
+margin: 0 auto;
+border-radius:10px;
+-webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.3);
+-moz-box-shadow:    0px 3px 8px 1px rgba(0,0,0,0.3);
+box-shadow:         0px 3px 8px 1px rgba(0,0,0,0.3);
+} 
+/*reset de body y de la pagina html*/
+body,html{margin:0; padding:0;}
+/*Formato de texto*/
+body{font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+/*Barra de menu en la parte superior de la pagina*/
+#barra_superior{
+padding:5px 20px;
+background:#080808;
+font-size:16px;
+color:#FFF;
+-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.3);
+-moz-box-shadow:    0px 0px 8px 1px rgba(0,0,0,0.3);
+box-shadow:         0px 0px 8px 1px rgba(0,0,0,0.3);
+margin-bottom:20px;
+overflow:hidden;
+min-width:920px;
+}
+#barra_superior ul /*Agregar una lista de menu*/
+{ list-style:none;
+  padding:0;
+  margin:0;
+  float:left;
+}
+#barra_superior ul li /*Agregar items a la lista*/
+{ padding:2px;
+  margin:0;
+  float:left;
+}
+#barra_superior a /*Agregar asignaciones de arranques de pagina a href*/
+{ display:block;
+  height:50px;
+  line-height:20px;
+  padding:0 5px;
+  text-decoration:none;
+  color:#FFF;
+  borden-radius:5px;
+}
+#barra_superior a:hover /*resalto de la asignacion*/
+{ color:#000;
+  background:#EFF;
+}
+/*Ajuste de Elementos Cuadraticos tablas, grillas,etc,etc....*/
+table.gridtable
+{font-family:Arial, Helvetica, sans-serif; font-size:14pxp;
+ color:#333333;
+ border-width:1px;
+ border-color:#666666;
+ border-collapse:collapse;
+}
+table.gridtable th /*Encabezados*/
+{ border-width:1px;
+  padding:8px;
+  border-style:solid;
+  border-color:#666666;
+  background-color:#777777;
+  background-color:#DEDEDE;
+}
+table.gridtable td /*Asignacion de Data*/
+{ border-width:1px;
+  padding:8px;
+  border-style:solid;
+  border-color:#666666;
+  background-color:#FFFFFF;
+  text-align:center;
+}
+
+
+
+
+
+

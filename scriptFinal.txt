@@ -1,0 +1,104 @@
+-- Generado por Oracle SQL Developer Data Modeler 4.1.3.901
+--   en:        2017-06-08 16:01:21 CLT
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+create database bd_farmacos;
+use bd_farmacos;
+
+CREATE TABLE perfil
+  (
+    `id_perfil` INT NOT NULL ,
+    `descripcion_perfil` VARCHAR (255)
+  ) ;
+
+CREATE TABLE `usuarios`
+  (
+    `id_usuario`               INT NOT NULL ,
+    `login_usuario`            VARCHAR (25) NOT NULL ,
+    `pass_usuario`             VARCHAR (25) NOT NULL ,
+    `nombre_usuario`           VARCHAR (25) NOT NULL ,
+    `apellido_usuario`         VARCHAR (25) NOT NULL ,
+    `correo_usuario`           VARCHAR (30) NOT NULL ,
+    `fecha_nacimiento_usuario` DATE NOT NULL ,
+    `id_perfil`                INT NOT NULL
+  ) ;
+
+
+CREATE TABLE farmacos
+  (
+    `id_farmaco`           INT NOT NULL ,
+    `descripcion`          VARCHAR (255) ,
+    `precio`               INT ,
+    `unidad`               INT,
+    `id_tipoFarmaco`       INT NOT NULL
+  ) ;
+
+CREATE TABLE `tipo_farmaco`
+  (
+    `id_tipo`          INT NOT NULL ,
+    `descripcion_tipo` VARCHAR (255)
+  ) ;
+
+
+CREATE TABLE `receta`
+  (
+    `id_receta`           INT NOT NULL ,
+    `fecha_emision`       DATE NOT NULL ,
+    `total_receta`        INT ,
+    `estado`              VARCHAR (25) ,
+    `id_usuario`          INT NOT NULL  ) ;
+
+
+CREATE TABLE `detalle_recetas` (
+    `id_receta`           INT NOT NULL ,
+    `id_farmaco`          INT NOT NULL ,
+    `cantidad`            INT NOT NULL,
+    `sub_total`           INT NOT NULL
+) ;
+
+
+
+ALTER TABLE farmacos ADD CONSTRAINT farmacos_PK PRIMARY KEY ( id_farmaco ) ;
+
+ALTER TABLE tipo_farmaco ADD CONSTRAINT tipo_farmaco_PK PRIMARY KEY ( id_tipo ) ;
+
+ALTER TABLE perfil ADD CONSTRAINT perfil_PK PRIMARY KEY ( id_perfil ) ;
+
+ALTER TABLE usuarios ADD CONSTRAINT usuarios_PK PRIMARY KEY ( id_usuario ) ;
+
+ALTER TABLE receta ADD CONSTRAINT receta_PK PRIMARY KEY ( id_receta ) ;
+
+ALTER TABLE detalle_recetas ADD CONSTRAINT detalle_recetas_farmacos_FK FOREIGN KEY ( id_farmaco ) REFERENCES farmacos ( id_farmaco ) ;
+
+ALTER TABLE detalle_recetas ADD CONSTRAINT detalle_recetas_receta_FK FOREIGN KEY ( id_receta ) REFERENCES receta ( id_receta ) ;
+
+
+ALTER TABLE farmacos ADD CONSTRAINT 
+farmacos_tipo_farmaco_FK FOREIGN KEY ( id_tipoFarmaco ) REFERENCES tipo_farmaco ( id_tipo) ;
+
+ALTER TABLE receta ADD CONSTRAINT receta_usuarios_FK FOREIGN KEY ( id_usuario ) REFERENCES usuarios ( id_usuario ) ;
+
+ALTER TABLE usuarios ADD CONSTRAINT usuarios_perfil_FK FOREIGN KEY ( id_perfil ) REFERENCES perfil ( id_perfil ) ;
+
+show tables;
+desc  detalle_recetas;
+desc farmacos;
+desc receta;
+desc tipo_farmaco;
+desc usuarios;
+
+insert into perfil values(1,"Admin");
+insert into perfil values(2,"Consulta");
+insert into perfil values(3,"Paciente");
+
+INSERT INTO `tipo_farmaco` (`id_tipo`, `descripcion_tipo`) VALUES
+(1, 'jarabe'),
+(2, 'pastillas'),
+(3, 'Analgesicos'),
+(4, 'Anestesia');
+
+INSERT INTO `usuarios` (`id_usuario`, `login_usuario`, `pass_usuario`, `nombre_usuario`, `apellido_usuario`, `correo_usuario`, `fecha_nacimiento_usuario`, `id_perfil`) VALUES
+(1, 'yisus', '123', 'Jesus', 'Perez', 'jesus@pulento.cl', '18/05/1995', 1),
+(2, 'wawito', '123', 'Felipe', 'Peñailillo', 'wawox@beio.cl', '12/12/1995', 2),
+(3, 'cabellin', '123', 'Sebastian', 'Cabello', 'cabellin@master.cl', '17/01/1991', 3);

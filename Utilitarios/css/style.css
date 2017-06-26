@@ -1,0 +1,342 @@
+/* CSS Document */
+
+body {
+	font:11px Tahoma, Arial, Helvetica, sans-serif;
+	color:#000;
+	background:#fff url(../images/bg.gif) center top repeat-x;
+	margin:0px;
+	padding:0px;
+}
+
+#layout {
+	width:1000px;
+	text-align:justify;
+	line-height:25px;
+	margin:0px auto;
+}
+
+#header {
+	height:200px;
+	position:relative;
+	background:url(../images/header.gif) left top no-repeat;
+	text-align: center;
+}
+
+#topzone {
+	height:131px;
+}
+
+#topzoneleft {
+	float:left;
+	padding:27px 0px 0px 48px;
+}
+
+#topzoneright {
+	float:right;
+}
+
+#headerleft {
+	width:262px;
+	float:left;
+	padding:0px 0px 0px 96px;
+}
+
+#headerright {
+	width:230px;
+	float:right;
+	padding:60px 60px 0px 0px;
+}
+
+#bodycontainer {
+	background:url(../images/bodycontainer.gif) left top repeat-y;
+	padding:40px 0px 0px 0px;
+}
+
+#leftcontainer {
+	width:606px;
+	float:left;
+	background:url(../images/leftcontainer.gif) left bottom no-repeat;
+	padding:0px 44px 0px 70px;
+}
+
+#rightcontainer {
+	width:213px;
+	float:right;
+	padding:0px 37px 0px 30px;
+}
+
+#welcomezone {
+	padding:0px 0px 40px 0px;
+}
+
+#servicezone {
+	padding:0px 0px 30px 0px;
+}
+
+#serviceleft {
+	width:400px;
+	float:left;
+}
+
+#serviceright {
+	width:170px;
+	float:right;
+}
+
+#methodologyzone {
+	padding:0px 0px 40px 0px;
+}
+
+.drrow {
+	padding:0px 0px 20px 0px;
+}
+
+#footercontainer {
+	margin:0px 0px 0px 0px;
+	background:url(../images/footer.gif) center top repeat-x;
+}
+
+#footer {
+	font:11px Tahoma, Arial, Helvetica, sans-serif;
+	width:1000px;
+	background:url(../images/footer1.gif) right top no-repeat;
+	height:60px;
+	padding:0px 0px 0px 0px;
+	margin:0px auto;
+}
+
+#footerleft {
+	float:left;
+	color:#b9cceb;
+	font-weight:bold;	
+	padding:25px 0px 0px 70px;
+}
+
+#footerright {
+	float:right;
+	color:#fff;		
+	padding:25px 50px 0px 0px;
+}
+
+.clear {
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+
+/*	Img Style Start Here  */
+
+.methodologyimg {
+	float:left;
+	padding:0px 30px 0px 0px;
+}
+
+.readmore {
+	padding:20px 0px 0px 0px;
+}
+
+.serviceimg {
+	float:right;
+	margin:0px 0px 0px 50px;
+}
+
+.drimg {
+	float:left;
+	padding:0px 20px 0px 0px;
+}
+
+/*	Img Style End Here  */
+
+/*	Text Style Start Here  */
+
+h1 {
+	font:28px Myriad pro, Arial, Helvetica, sans-serif;
+	color:#5f8bd1;
+	border-bottom:1px solid #cecece;
+	padding:0px 0px 7px 0px;
+	margin:0px 0px 20px 0px;
+}
+
+h2 {
+	font:bold 11px Tahoma, Arial, Helvetica, sans-serif;
+	color:#5f8bd1;
+	padding:0px;
+	margin:0px;
+}
+
+.bannertxt1 {
+	font:bold 30px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-align: left;
+}
+
+.bannertxt2 {
+	font:bold 30px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#9fc7ff;
+}
+
+.bannertxt3 {
+	font:30px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#fff;
+	font-weight:100;
+	padding:0px 0px 0px 50px;
+}
+
+/*	Text Style End Here  */
+
+
+/*	Menu Style Start Here  */
+
+a {
+	color:#5f8bd1;
+	text-decoration:underline;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.topmenu {
+	border-left:1px solid #acc3e6;
+	border-right:1px solid #acc3e6;
+	padding:27px 0px 110px 0px;
+}
+
+.topmenu ul {
+	margin:0px;
+	padding:0px;
+	border-bottom:1px solid #87a9de;
+}
+
+.topmenu ul li {
+	padding:5px 0px 5px 22px;
+	list-style:none;
+	border-top:1px solid #87a9de;
+	margin:0px;
+}
+
+.topmenu li a {
+	font:16px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-transform:uppercase;
+	background:url(../images/topdisc.gif) 0px 8px no-repeat;
+	text-decoration:none;
+	padding:0px 0px 0px 32px;
+}
+
+.topmenu li a:hover {
+	color:#e1e1e1;
+}
+
+.listlink {
+	padding:0px 0px 0px 0px;
+}
+
+.listlink ul {
+	margin:0px;
+	padding:0px;
+}
+
+.listlink ul li {
+	display:block;
+	list-style:none;
+	background:url(../images/disc.gif) 0px 11px no-repeat;
+	padding:0px 0px 0px 12px;
+}
+
+.listlink li a {
+	color:#5f8bd1;
+	text-decoration:underline;
+}
+
+.listlink li a:hover {
+	text-decoration:none;
+}
+
+.bannerlistlink {
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+}
+
+.bannerlistlink ul {
+	margin:0px;
+	padding:0px;
+}
+
+.bannerlistlink ul li {
+	display:block;
+	list-style:none;
+	background:url(../images/disc1.gif) 0px 11px no-repeat;
+	padding:0px 0px 0px 12px;
+}
+
+.bannerlistlink li a {
+	color:#fff;
+	text-decoration:underline;
+}
+
+.bannerlistlink li a:hover {
+	text-decoration:none;
+}
+
+#topanchor {
+	background:url(../images/topanchorback.gif) left top no-repeat;
+	padding:65px 60px 7px 20px;
+}
+
+#topanchor a {
+	display:block;
+	float:left;
+	font:11px Tahoma, Arial, Helvetica, sans-serif;
+	padding:0px 0px 0px 0px;
+	color:#8d8d8d;
+	text-decoration:none;
+}
+
+#topanchor a:hover {
+	color:#000;
+}
+
+#topanchor a.home {
+	background:url(../images/home.gif) 0px 2px no-repeat;
+	padding:0px 0px 5px 15px;
+}
+
+#topanchor a.email {
+	background:url(../images/mail.gif) 0px 2px no-repeat;
+	padding:0px 0px 5px 15px;
+	margin:0px 0px 0px 10px;
+}
+
+#footer a {
+	color:#b9cceb;
+	text-decoration:underline;
+}
+
+#footer a:hover {
+	text-decoration:none;
+}
+
+/*	Menu Style End Here  */
+/* inner pages css start */
+h1.inner{font:33px Myriad Pro, Arial; color:#fff; font-weight:100; margin:0px; padding:25px 0px 10px 0px; background:none}
+.aboutus-img{float:right; border:4px solid #b0a48b;	margin:0px 0px 10px 20px;}
+h5{font:15px Myriad Pro, Arial, Helvetica, sans-serif; color:#5f8bd1; font-weight:bold; padding:0px 0px 5px 0px;	border-bottom:1px dotted #5f8bd1;	margin:0px 0px 10px 0px;}
+h6{font:17px Myriad Pro, Arial, Helvetica, sans-serif; color:#5f8bd1; font-weight:bold; padding:0px 0px 5px 0px;	margin:0px 0px 10px 0px;}
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+input.button{color:#ffffff;	background:#414141;	font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #000000;}
+input.button:hover{cursor:pointer; color:#cccccc;}
+.project-img{float:right; margin-left:20px;	border: 6px solid #5f8bd1;}
+.whiteheading{font:30px Myriad Pro, Arial; color:#000; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px;	border-bottom:1px dotted #000; padding-bottom:10px; width: 95%;}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:3px;}
+/* inner pages css ends */
