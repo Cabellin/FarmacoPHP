@@ -33,14 +33,14 @@ class Farmacos
    //NEGOCIO
 public function ingresarFarmaco()
    { $objConex=new Conexion();
-     $sql="INSERT INTO farmacos VALUES(".$this->id_farmaco.",'".$this->descripcion."',".$this->precio.",".$this->unidad.",".$this->id_tipoFarmaco")";
+     $sql="INSERT INTO farmacos VALUES(".$this->id_farmaco.",'".$this->descripcion."',".$this->precio.",".$this->unidad.",".$this->id_tipoFarmaco.")";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    }
    
 public function modificarFarmaco()
    { $objConex=new Conexion();
-     $sql="UPDATE farmacos SET DESCRIPCION='".$this->descripcion."',PRECIO=".$this->precio.",UNIDAD=".$this->unidad." WHERE(ID_FARMACO=".$this->id_farmaco" )";
+     $sql="UPDATE farmacos SET DESCRIPCION='".$this->descripcion."',PRECIO=".$this->precio.",UNIDAD=".$this->unidad." WHERE(ID_FARMACO=".$this->id_farmaco." )";
      $resul=$objConex->generarTransaccion($sql);
      return $resul;
    } 
